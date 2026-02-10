@@ -4,139 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MedRoute Counselling Services | NEET UG Admission Guidance</title>
+    <title>Sure Seat Medical Counselling Services | NEET UG Admission Guidance</title>
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 0;
-            font-family: "Segoe UI", Arial, sans-serif;
-            background: #f2f5f9;
-            color: #222;
-        }
-
-        a {
-            text-decoration: none;
-            color: #0b5ed7;
-        }
-
-        header {
-            background: #083b66;
-            color: white;
-            padding: 25px 15px;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 30px;
-        }
-
-        header p {
-            margin-top: 8px;
-            font-size: 16px;
-        }
-
-        nav {
-            background: #ffffff;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav ul {
-            margin: 0;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            gap: 25px;
-        }
-
-        nav ul li {
-            font-weight: 600;
-        }
-
-        nav ul li a {
-            padding: 5px 10px;
-            transition: background 0.3s, color 0.3s;
-            border-radius: 4px;
-        }
-
-        nav ul li a:hover {
-            background: #083b66;
-            color: white;
-        }
-
-        .container {
-            max-width: 1150px;
-            margin: auto;
-            padding: 25px 15px;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, #ffffff 0%, #e0f0ff 100%);
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            padding: 30px;
-            border-radius: 8px;
-            align-items: center;
-        }
-
-        .hero img {
-            max-width: 480px;
-            width: 100%;
-            border-radius: 8px;
-        }
-
-        .hero-text h2 {
-            color: #083b66;
-            font-size: 28px;
-        }
-
-        .hero-text p {
-            font-size: 16px;
+            font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
             line-height: 1.6;
         }
 
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(30, 64, 175, 0.3);
+        }
+
+        header h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 18px;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        /* Navigation */
+        nav {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            sticky: top;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 18px 28px;
+            color: #475569;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav ul li a:hover {
+            color: #3b82f6;
+            border-bottom-color: #3b82f6;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 100%);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            padding: 60px 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .hero img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .hero-text h2 {
+            color: #1e40af;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-text p {
+            font-size: 17px;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 15px 35px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .cta-button:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Section */
         .section {
             background: white;
-            margin-top: 25px;
-            padding: 30px;
-            border-radius: 8px;
+            margin-bottom: 30px;
+            padding: 45px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
         }
 
         .section h2 {
-            color: #083b66;
+            color: #1e40af;
+            font-size: 32px;
+            margin-bottom: 25px;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #475569;
             margin-bottom: 15px;
+            line-height: 1.8;
         }
 
-        .section p,
-        li {
-            font-size: 15.5px;
-            line-height: 1.7;
-        }
-
+        /* Services Grid */
         .services {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .service-box {
-            background: #f8fbff;
-            border-left: 5px solid #0b5ed7;
-            padding: 18px;
-            border-radius: 5px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 5px solid #3b82f6;
+            padding: 28px 24px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
             cursor: pointer;
+            font-weight: 600;
+            color: #1e40af;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .service-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.25);
+            background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
         }
 
+        /* Trust Section */
         .trust {
-            background: #083b66;
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
             color: white;
         }
 
@@ -144,38 +207,215 @@
             color: white;
         }
 
+        .trust h2::after {
+            background: white;
+        }
+
+        .trust ul {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .trust ul li {
+            padding: 12px 0;
+            font-size: 17px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .trust ul li::before {
+            content: '✓';
+            background: white;
+            color: #1e40af;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .trust a {
+            color: #fbbf24;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .trust a:hover {
+            color: #fde047;
+        }
+
+        /* Contact Section */
         .contact {
-            background: #0b5ed7;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             color: white;
         }
 
-        .contact a {
+        .contact h2 {
             color: white;
+        }
+
+        .contact h2::after {
+            background: #3b82f6;
+        }
+
+        .phone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .phone-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .phone-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: scale(1.05);
+        }
+
+        .phone-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 18px 40px;
+            background: #25D366;
+            color: white;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-btn:hover {
+            background: #20ba5a;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        /* Address Section */
+        .address-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 5px solid #3b82f6;
+        }
+
+        .address-card p {
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .address-card a {
+            color: #3b82f6;
+            font-weight: 600;
             text-decoration: none;
         }
 
-        footer {
-            background: #02233f;
-            color: #ccc;
-            text-align: center;
-            padding: 20px 15px;
-            font-size: 14px;
-            border-top: 3px solid #0b5ed7;
+        .address-card a:hover {
+            text-decoration: underline;
         }
 
-        @media(max-width:768px) {
+        /* Floating WhatsApp */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            font-size: 36px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 35px rgba(37, 211, 102, 0.6);
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 6px 35px rgba(37, 211, 102, 0.7);
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 15px;
+            border-top: 3px solid #3b82f6;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
             header h1 {
-                font-size: 24px;
+                font-size: 28px;
             }
 
             .hero {
-                flex-direction: column;
+                grid-template-columns: 1fr;
+                padding: 40px 25px;
             }
-        }
 
-        .phone-number {
-            cursor: pointer;
-            text-decoration: underline;
+            .hero-text h2 {
+                font-size: 28px;
+            }
+
+            .section {
+                padding: 30px 20px;
+            }
+
+            .section h2 {
+                font-size: 26px;
+            }
+
+            nav ul li a {
+                padding: 15px 20px;
+            }
+
+            .floating-whatsapp {
+                width: 60px;
+                height: 60px;
+                font-size: 30px;
+                bottom: 20px;
+                right: 20px;
+            }
         }
     </style>
 </head>
@@ -183,162 +423,165 @@
 <body>
 
     <header>
-        <h1>MedRoute Counselling Services</h1>
-        <p>NEET UG Counselling & Career Guidance</p>
+        <h1>Sure Seat Medical Counselling Services</h1>
+        <p>Your Trusted Partner for NEET UG Admissions</p>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
 
         <!-- HERO -->
-        <div class="hero">
-            <img src="https://via.placeholder.com/480x320.png?text=MedRoute+Office" alt="MedRoute Counselling Office">
+        <div class="hero" id="home">
+            <img src="	https://t3.ftcdn.net/jpg/08/31/18/44/240_F_831184439_MBQ0OFHxyZ6yXmN9DAMtHLPEGGCZHAbl.jpg"
+                alt="Sure Seat Medical Counselling">
             <div class="hero-text">
-                <h2>Trusted Guidance for Medical Admissions</h2>
+                <h2>Secure Your Medical Future</h2>
                 <p>
-                    MedRoute Counselling Services provides clear, structured and transparent
-                    counselling guidance for students and parents preparing for NEET UG admissions.
-                    Our focus is correct information, proper explanation, and responsible guidance.
+                    At Sure Seat Medical Counselling Services, we provide expert guidance and transparent counselling
+                    for NEET UG admissions. Our mission is to help students and parents navigate the complex admission
+                    process with confidence and clarity.
                 </p>
+                <a href="#contact" class="cta-button">Get Started Today</a>
             </div>
         </div>
 
         <!-- ABOUT -->
-        <div class="section">
+        <div class="section" id="about">
             <h2>About Us</h2>
             <p>
-                MedRoute Counselling Services was established to support students and parents
-                during one of the most important academic decisions of their lives.
+                Sure Seat Medical Counselling Services is dedicated to empowering students and their families
+                during one of the most crucial decisions in their academic journey.
             </p>
             <p>
-                We guide admissions for MBBS, BAMS, BHMS, BUMS and BPT through
-                All India quota, State quota and Management quota counselling processes.
+                We specialize in admission counselling for MBBS, BAMS, BHMS, BUMS, and BPT programs through
+                All India Quota, State Quota, and Management Quota processes.
             </p>
             <p>
-                Every step is explained in a simple and understandable manner so that parents
-                can make informed decisions with confidence.
+                Our approach combines deep expertise with personalized attention, ensuring every student
+                receives guidance tailored to their unique needs and aspirations. We break down complex
+                procedures into simple, understandable steps.
             </p>
         </div>
 
         <!-- SERVICES -->
-        <div class="section">
+        <div class="section" id="services">
             <h2>Our Services</h2>
             <div class="services">
-                <div class="service-box">MBBS Admission Counselling</div>
-                <div class="service-box">BAMS Admission Counselling</div>
-                <div class="service-box">BHMS Admission Counselling</div>
-                <div class="service-box">BUMS Admission Counselling</div>
-                <div class="service-box">BPT Admission Counselling</div>
-                <div class="service-box">All India Quota Counselling</div>
-                <div class="service-box">State Quota Counselling</div>
-                <div class="service-box">Management Quota Counselling</div>
+                <div class="service-box">📚 MBBS Admission Counselling</div>
+                <div class="service-box">🌿 BAMS Admission Counselling</div>
+                <div class="service-box">💊 BHMS Admission Counselling</div>
+                <div class="service-box">⚕️ BUMS Admission Counselling</div>
+                <div class="service-box">🏥 BPT Admission Counselling</div>
+                <div class="service-box">🇮🇳 All India Quota Counselling</div>
+                <div class="service-box">📍 State Quota Counselling</div>
+                <div class="service-box">🎓 Management Quota Counselling</div>
             </div>
         </div>
 
         <!-- TRUST -->
         <div class="section trust">
-            <h2>Why Parents Trust MedRoute</h2>
+            <h2>Why Choose Sure Seat?</h2>
             <ul>
-                <li>✔ Clear and honest counselling approach</li>
-                <li>✔ Proper explanation of admission procedures</li>
-                <li>✔ Written counselling agreement</li>
-                <li>✔ Focus on student’s future and suitability</li>
-                <li>✔ Transparent communication with parents</li>
+                <li>Complete transparency in every step of the counselling process</li>
+                <li>Detailed explanation of admission procedures and requirements</li>
+                <li>Written counselling agreement for your peace of mind</li>
+                <li>Student-centric approach focused on long-term career success</li>
+                <li>Open and honest communication with parents at all times</li>
+                <li>Proven track record of successful admissions</li>
             </ul>
-            <p>
-                📄 <a href="./docs/Admission_Counselling_Agreement_Final_English.pdf" target="_blank"
-                    style="color:#ffe066;">Download Counselling Agreement</a>
+            <p style="margin-top: 30px;">
+                📄 <a href="./docs/Admission_Counselling_Agreement_Final_English.pdf" target="_blank">
+                    Download Our Counselling Agreement
+                </a>
             </p>
         </div>
 
         <!-- ADDRESS -->
         <div class="section">
-            <h2>Office Address</h2>
-            <p>
-                Prakashmani Vidyamandir,<br>
-                Butibori, Nagpur, Maharashtra
-            </p>
-            <p>
-                📍 <a href="https://maps.google.com/?q=W2P3+96H, Butibori, Maharashtra" target="_blank">
-                    View Location on Google Maps
-                </a>
-            </p>
+            <h2>Our Office</h2>
+            <div class="address-card">
+                <p><strong>📍 Location:</strong></p>
+                <p>
+                    Prakashmani Vidyamandir,<br>
+                    Butibori, Nagpur, Maharashtra
+                </p>
+                <p style="margin-top: 20px;">
+                    <a href="https://maps.google.com/?q=W2P3+96H, Butibori, Maharashtra" target="_blank">
+                        🗺️ View on Google Maps →
+                    </a>
+                </p>
+            </div>
         </div>
 
         <!-- CONTACT -->
-        <div class="section contact">
-            <h2>Contact Us</h2>
-            <p style="margin-bottom:10px;">
-                📞 <a href="tel:8149632676" class="phone-number" onclick="copyNumber('8149632676')">8149632676</a><br>
-                📞 <a href="tel:9284642086" class="phone-number" onclick="copyNumber('9284642086')">9284642086</a><br>
-                📞 <a href="tel:9371839679" class="phone-number" onclick="copyNumber('9371839679')">9371839679</a><br>
-                📞 <a href="tel:8788713284" class="phone-number" onclick="copyNumber('8788713284')">8788713284</a>
-            </p>
-            <p style="margin-top:15px;">
-                💬 <a href="https://wa.me/918149632676" target="_blank" style="
-              color:white;
-              font-weight:bold;
-              background:#25D366;
-              padding:12px 18px;
-              border-radius:8px;
-              display:inline-block;
-              text-align:center;
-              font-size:16px;
-              box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-              transition: transform 0.2s, box-shadow 0.2s;
-            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.4)';"
-                    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.2)';">
-                    Chat with us on WhatsApp
+        <div class="section contact" id="contact">
+            <h2>Get in Touch</h2>
+            <p>Ready to secure your medical seat? Contact us today for expert counselling.</p>
+
+            <div class="phone-grid">
+                <div class="phone-item">
+                    <a href="tel:8149632676" onclick="copyNumber('8149632676')">📞 8149632676</a>
+                </div>
+                <div class="phone-item">
+                    <a href="tel:9284642086" onclick="copyNumber('9284642086')">📞 9284642086</a>
+                </div>
+                <div class="phone-item">
+                    <a href="tel:9371839679" onclick="copyNumber('9371839679')">📞 9371839679</a>
+                </div>
+                <div class="phone-item">
+                    <a href="tel:8788713284" onclick="copyNumber('8788713284')">📞 8788713284</a>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <a href="https://wa.me/918149632676" target="_blank" class="whatsapp-btn">
+                    💬 Chat with us on WhatsApp
                 </a>
-            </p>
+            </div>
         </div>
 
     </div>
 
     <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/918149632676" target="_blank" style="
-     position:fixed;
-     bottom:20px;
-     right:20px;
-     background:#25D366;
-     color:white;
-     border-radius:50%;
-     width:60px;
-     height:60px;
-     display:flex;
-     align-items:center;
-     justify-content:center;
-     box-shadow:0 4px 12px rgba(0,0,0,0.3);
-     z-index:1000;
-     font-size:30px;
-     transition: transform 0.2s, box-shadow 0.2s;
-     text-decoration:none;
-   " onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.4)';"
-        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 12px rgba(0,0,0,0.3)';">
+    <a href="https://wa.me/918149632676" target="_blank" class="floating-whatsapp" title="Chat on WhatsApp">
         💬
     </a>
 
     <footer>
-        © 2026 MedRoute Counselling Services | NEET UG Admission Guidance
+        © 2026 Sure Seat Medical Counselling Services | NEET UG Admission Guidance<br>
+        Helping Students Achieve Their Medical Dreams
     </footer>
 
     <script>
-        // Copy phone number on desktop if clicked
+        // Copy phone number on desktop
         function copyNumber(number) {
-            // Only show alert on non-mobile devices
             if (!/Mobi|Android/i.test(navigator.userAgent)) {
                 navigator.clipboard.writeText(number);
                 alert('Phone number copied: ' + number);
             }
         }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
 
 </body>
