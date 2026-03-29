@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - '**'
+  workflow_dispatch:
+  inputs: 
+    num1:
+      description: 'First number'
+      required: true
+      default: 0
+    num2:
+      description: 'Second number'
+      required: true
+      default: 0
 env: 
   platform: "Ubuntu"
 
@@ -13,11 +23,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Dump GitHub context
+      - name: Sum two numbers
+        id: sum
         run:  |
-         echo "Repository name ${{github.repository}}"
-         echo "workflow name ${{github.workflow}}"
-         echo "workspace name ${{github.workspace}}"
-
-
+          echo "Repository name ${{github.repository}}"
+          echo "First number: ${{ github.event.inputs.num1 }}"
+          echo "Second number: ${{ github.event.inputs.num2 }}"
+          sum=$(( ${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }} ))
+          echo "Sum: $sum"
       
