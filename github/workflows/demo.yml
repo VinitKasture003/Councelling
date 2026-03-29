@@ -6,8 +6,8 @@ on:
     branches: ["**"]
   workflow_dispatch: 
 jobs: 
-  build: ubuntu-latest:
+  build: ubuntu-latest,
   steps: actions/checkout@v4,
   name: Run a one-line script
   run: echo "Hello world"
-  
+
