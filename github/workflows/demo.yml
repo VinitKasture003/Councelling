@@ -3,15 +3,13 @@ name: Test workflow
 on:
   push:
     branches: ["**"]
-  pull_request:
-    branches: ["**"]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
 
       - name: Run a one-line script
