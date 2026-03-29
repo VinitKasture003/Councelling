@@ -5,27 +5,35 @@ on:
     branches:
       - '**'
   workflow_dispatch:
-  inputs: 
-    num1:
-      description: 'First number'
-      required: true
-      default: 0
-    num2:
-      description: 'Second number'
-      required: true
-      default: 0
+    inputs: 
+      num1:
+        description: 'First number'
+        required: true
+        default: '0'
+      num2:
+        description: 'Second number'
+        required: true
+        default: '0'
+
 env: 
   platform: "Ubuntu"
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-      sum: num1 + num2
+
     steps:
       - uses: actions/checkout@v4
       - name: Sum two numbers
         id: sum
-        run:  |
-          echo "sum ${{env.sum}}"
-      
+        run: |
+          # Use '0' as a fallback if the event isn't a manual dispatch
+          N1=${{ github.event.inputs.num1 || 0 }}
+          N2=${{ github.event.inputs.num2 || 0 }}
+          
+          echo "Repository name: ${{ github.repository }}"
+          echo "First number: $N1"
+          echo "Second number: $N2"
+          
+          SUM=$(( N1 + N2 ))
+          echo "Sum: $SUM"
