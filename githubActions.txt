@@ -16,3 +16,6 @@ Actions - An Action is a discrete, reusable unit of code that performs a specifi
         up an environment or deploying to a cloud provider—without reinventing the wheel
 
 Runner - A Runner is the server (computer) that actually executes the instructions in your workflow
+
+
+VARIABLES AND SECRETS
