@@ -1,8 +1,7 @@
 name: Test workflow
 
 on:
-  workflow_dispatch:
-  push:
+a  push:
     branches:
       - '**'
 
