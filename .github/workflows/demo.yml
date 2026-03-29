@@ -20,15 +20,12 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    env: 
+      sum: num1 + num2
     steps:
       - uses: actions/checkout@v4
       - name: Sum two numbers
         id: sum
         run:  |
-          echo "Repository name ${{github.repository}}"
-          echo "First number: ${{ github.event.inputs.num1 }}"
-          echo "Second number: ${{ github.event.inputs.num2 }}"
-          sum=$(( ${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }} ))
-          echo "Sum: $sum"
+          echo "sum ${{env.sum}}"
       
