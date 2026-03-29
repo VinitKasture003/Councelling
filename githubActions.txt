@@ -19,3 +19,8 @@ Runner - A Runner is the server (computer) that actually executes the instructio
 
 
 VARIABLES AND SECRETS
+
+environment vairables - these variables can be defined using env keyword
+configuration variables - these variables had to be specifically added in github configuration vairables and 
+then you can use in your workflow using this syntax --> ${{ vars.variableName }}
+
