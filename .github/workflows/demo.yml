@@ -9,7 +9,10 @@ env:
 
 jobs:
   build:
+    name: Test log
     runs-on: ubuntu-latest
+    run: echo "Hello $name, this workflow is running on $platform"
+
     steps:
       - uses: actions/checkout@v4
       - name: Run a one-line script
