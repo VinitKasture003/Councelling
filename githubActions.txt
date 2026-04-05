@@ -1,0 +1,26 @@
+Github Actions
+
+GA - Github Actions
+
+GA is CI/CD platform that allows us to automate your software development lifecycle.
+It uses event driven workflows to automatically build, test and deploy your code whenever changes are 
+made to your repository.
+
+Job - A job is a specific unit of work within a workflow that runs on a single runner (A virtual server).
+If a workflow is entire rule book then a job is the chapter in that book.
+
+Events - Events are the "Triggers." They are the specific activities that triggers the workflow 
+
+Actions - An Action is a discrete, reusable unit of code that performs a specific task within a workflow step. 
+        They serve as the building blocks of automation, allowing developers to share and combine common tasks—like setting 
+        up an environment or deploying to a cloud provider—without reinventing the wheel
+
+Runner - A Runner is the server (computer) that actually executes the instructions in your workflow
+
+
+VARIABLES AND SECRETS
+
+environment vairables - these variables can be defined using env keyword
+configuration variables - these variables had to be specifically added in github configuration vairables and 
+then you can use in your workflow using this syntax --> ${{ vars.variableName }}
+
